@@ -4,6 +4,7 @@ class Incidencia {
   String descripcion;
   String cliente;
   String categoria;
+  String prioridad;
   String estado;
   String fecha;
 
@@ -13,6 +14,7 @@ class Incidencia {
     required this.descripcion,
     required this.cliente,
     required this.categoria,
+    required this.prioridad,
     required this.estado,
     required this.fecha,
   });
@@ -24,6 +26,7 @@ class Incidencia {
       descripcion: m['descripcion']?.toString() ?? '',
       cliente: m['cliente']?.toString() ?? '',
       categoria: m['categoria']?.toString() ?? 'Software',
+      prioridad: m['prioridad']?.toString() ?? 'media',
       estado: m['estado']?.toString() ?? 'Pendiente',
       fecha: m['fecha']?.toString() ?? '',
     );
@@ -36,6 +39,7 @@ class Incidencia {
       'descripcion': descripcion,
       'cliente': cliente,
       'categoria': categoria,
+      'prioridad': prioridad,
       'estado': estado,
       'fecha': fecha,
     };
